@@ -12,7 +12,11 @@ class propertyApiView(APIView):
         return Response(serializer.data)
     
     def post(self,request):
-        
+        def get(self,request):
+        properties = property.objects.all()
+        serializer = propertySlzr(properties,many= True)
+        return Response(serializer.data)
+    
     
 
 
