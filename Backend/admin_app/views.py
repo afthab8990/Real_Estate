@@ -10,6 +10,13 @@ class propertyApiView(APIView):
         properties = property.objects.all()
         serializer = propertySlzr(properties,many= True)
         return Response(serializer.data)
+    
+    def post(self,request):
+        serializer = propertySlzr(data=request.data)
+        if serializer.is_valid():
+            serializer.sava()
+            return Response(serializer.data,status=status.HTTP_201_CREATED)
+        return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
 
 
     

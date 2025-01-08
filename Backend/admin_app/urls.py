@@ -1,6 +1,6 @@
 from django.urls import path
-from .import views
+from .views import *
 
 urlpatterns = [
-    path(),
+    path('api/property',propertyApiView.as_view(),name="property"),
 ]
