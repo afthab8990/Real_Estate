@@ -1,0 +1,25 @@
+:root{
+    /* Colors */
+    --primary-color:#FFF2D8;
+    --secondary-color:#EAD7BB;
+    --teritiary-color:#BCA37F;
+    --contrast-color:#113946;
+    --text-dark:#131010;
+    --text-light:#FFF0DC;
+
+    /* Text sizes */
+    --primary-size:30px;
+    --secondary-size:25px;
+    --small:20px;
+    --extra-big:50px;
+    --xx-big:70px;
+}
+
+body{
+    color: var(--text-light);
+    background-color: var(--primary-color);
+}
+
+.property-form{
+    color: var(--text-dark);
+}
